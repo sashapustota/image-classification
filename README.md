@@ -54,14 +54,16 @@ cd image-classification
 
 The ``setup.sh`` script is used to automate the installation of project dependencies and configuration of the environment. By running this script, you ensure consistent setup across different environments and simplify the process of getting the project up and running.
 
+The script performs the following steps:
+
 1. Creates a virtual environment for the project
 2. Activates the virtual environment
 3. Installs the required packages
 4. Deactivates the virtual environment
 
-### Run ```run_lr_classification.sh``` or ```run_nn_classification.sh```
+### Run ```run_lr_classifier.sh``` or ```run_nn_classifier.sh```
 
-The ```run_lr_classification.sh``` and ```run_nn_classification.sh``` scripts are used to run the logistic regression and neural network classifiers respectively. The scripts perform the following steps:
+The ```run_lr_classifier.sh``` and ```run_nn_classifier.sh``` scripts are used to run the logistic regression and neural network classifiers respectively. The scripts perform the following steps:
 
 1. Load the Cifar10 dataset
 2. Preprocess the data
@@ -69,47 +71,47 @@ The ```run_lr_classification.sh``` and ```run_nn_classification.sh``` scripts ar
 4. Fit the classifier
 5. Save a classification report
 
-To run the scripts, simply run the following lines in the unix-based bash:
+To run the scripts, simply run the following commands in your terminal:
 
 ```bash
-bash run_lr_classification.sh
+bash run_lr_classifier.sh
 ```
 
 or
 
 ```bash
-bash run_nn_classification.sh
+bash run_nn_classifier.sh
 ```
 
 ## Results
 
-A classification report from the each approach on the data is located in the folder ```out```.
+A classification report from the each approach on the data is saved to the folder ```out```.
 
 ## Customizing model parameters
 
-The ```run_lr_classification.sh``` and ```run_nn_classification.sh``` scripts are designed to run the models with the default parameters. However, it is possible to customize the parameters by changing the values in the scripts or by passing the parameters as arguments in the terminal.
+The ```run_lr_classifier.sh``` and ```run_nn_classifier.sh``` scripts are designed to run the models with the default parameters. However, it is possible to customize the parameters by changing the values in the scripts or by passing the parameters as arguments in the terminal.
 
-The following parameters can be customized for the ```logistic regression classifier```:
+The following parameters can be customized for the **logistic regression classifier**:
 
 * ```--tol -t``` - Tolerance for stopping criteria. Default value is ```0.1```.
 * ```--solver -s``` - Algorithm to use in the optimization problem. Default value is ```saga```.
 * ```--penalty -p``` - "Specify the norm of the penalty." Default value is ```none```.
 * ```--max_iter -i``` - Maximum number of iterations taken for the solvers to converge. Default value is ```35```.
 
-To pass the parameters as arguments in the terminal, simply run the following lines in the unix-based bash:
+To pass the parameters as arguments in the terminal, simply run the following lines in your terminal:
 
 ```bash
 python3 src/lr_classifier.py --tol <your value> --solver <your value> --penalty <your value> --max_iter <your value>
 ```
 
-The following parameters can be customized for the ```neural network classifier```:
+The following parameters can be customized for the **neural network classifier**:
 
 * ```--hidden_layer_sizes -hls``` - The ith element represents the number of neurons in the ith hidden layer. Default value is ```64,10```.
 * ```--max_iter -i``` - Maximum number of iterations taken for the solvers to converge. Default value is ```20```.
 * ```--learning_rate -l``` - Learning rate schedule for weight updates. Default value is ```adaptive```.
 * ```--early_stopping -s``` - Whether to use early stopping to terminate training when validation score is not improving. Default value is ```True```.
 
-To pass the parameters as arguments in the terminal, simply run the following lines in the unix-based bash:
+To pass the parameters as arguments in the terminal, simply run the following lines in your terminal:
 
 ```bash
 python3 src/nn_classifier.py -hls <your value> -i <your value> -l <your value> -s <your value>
