@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h1 align="center">Cultural Datascience 2023</h1> 
+  <h1 align="center">Cultural Data Science 2023</h1> 
   <h2 align="center">Assignment 2</h2> 
   <h3 align="center">Visual Analytics</h3> 
 
