@@ -101,7 +101,7 @@ The following parameters can be customized for the **logistic regression classif
 To pass the parameters as arguments in the terminal, simply run the following lines in your terminal:
 
 ```bash
-python3 src/lr_classifier.py --tol <your value> --solver <your value> --penalty <your value> --max_iter <your value>
+python3 src/lr_classifier.py -t <your value> -s <your value> -p <your value> -i <your value>
 ```
 
 The following parameters can be customized for the **neural network classifier**:
