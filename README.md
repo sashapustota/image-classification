@@ -114,7 +114,9 @@ The following parameters can be customized for the **neural network classifier**
 To pass the parameters as arguments in the terminal, simply run the following lines in your terminal:
 
 ```bash
+source ./cifar10_classifiers_venv/bin/activate
 python3 src/nn_classifier.py -hls <your value> -i <your value> -l <your value> -s <your value>
+deactivate
 ```
 
 <!-- REPOSITORY STRUCTURE -->
