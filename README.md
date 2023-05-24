@@ -101,7 +101,9 @@ The following parameters can be customized for the **logistic regression classif
 To pass the parameters as arguments in the terminal, simply run the following lines in your terminal:
 
 ```bash
+source ./cifar10_classifiers_venv/bin/activate
 python3 src/lr_classifier.py -t <your value> -s <your value> -p <your value> -i <your value>
+deactivate
 ```
 
 The following parameters can be customized for the **neural network classifier**:
